@@ -84,3 +84,17 @@ The objective of the project is to explore autonomous planning, tool usage, dele
 ### Status
 
 Accepted
+
+## Decision 005 — Standard Python Virtual Environment
+
+### Decision
+
+Use standard Python 3.13 with a project-local virtual environment (`.venv`) instead of Conda.
+
+### Reason
+
+The project does not require Conda. A standard Python virtual environment provides isolated dependencies while keeping the development setup simple and close to typical Python development and deployment environments.
+
+### Status
+
+Accepted
