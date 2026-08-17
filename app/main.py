@@ -1,11 +1,12 @@
 import asyncio
 
+import app.config
 from agents import Agent, Runner
-
 
 
 agent = Agent(
     name="Research Agent",
+    model="gpt-5-mini",
     instructions="""
     You are a research assistant.
 
@@ -18,7 +19,7 @@ agent = Agent(
 async def main():
     result = await Runner.run(
         agent,
-        "What is an AI agent?"
+        "What is an AI agent? Answer in three sentences."
     )
 
     print(result.final_output)
@@ -26,4 +27,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-    
