@@ -98,3 +98,23 @@ The project does not require Conda. A standard Python virtual environment provid
 ### Status
 
 Accepted
+
+---
+
+## Decision 006 — Use the OpenAI Agents SDK
+
+### Decision
+
+Use the OpenAI Agents SDK as the initial framework for implementing the agentic system.
+
+### Reason
+
+The SDK provides core primitives required by the project, including agents, execution through a runner, tool integration, and support for multi-agent orchestration.
+
+Using these primitives allows the project to focus on agentic system design rather than implementing the underlying agent execution loop from scratch.
+
+The SDK will be evaluated continuously as the architecture develops. If it becomes a limitation, the decision can be revisited.
+
+### Status
+
+Accepted
