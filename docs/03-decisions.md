@@ -118,3 +118,28 @@ The SDK will be evaluated continuously as the architecture develops. If it becom
 ### Status
 
 Accepted
+
+---
+
+## Decision 007 — Validate Tool Calling with a Local Tool
+
+### Decision
+
+Validate the agent tool-calling architecture using a deterministic local Python function before introducing external tools.
+
+### Reason
+
+A local tool isolates the tool-calling mechanism from external dependencies such as web search, network access, and source retrieval.
+
+This allows us to verify that the agent can:
+
+- receive a tool description
+- decide when the tool is relevant
+- invoke the tool
+- use the returned information in its final response
+
+Once this mechanism is verified, external research tools can be introduced with fewer variables involved in debugging.
+
+### Status
+
+Accepted

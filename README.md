@@ -78,3 +78,19 @@ The current application:
 - returns the model's response
 
 The agent does not yet have external tools or autonomous research capabilities. These will be introduced incrementally in subsequent implementation steps.
+
+## V1 — Tool Calling
+
+The agent can now use a Python function as an external tool.
+
+The tool is exposed to the agent through the OpenAI Agents SDK. The agent receives the available tool description and can decide whether to call it based on the user's request.
+
+The current implementation demonstrates the basic agentic loop:
+
+1. Receive a request.
+2. Determine whether a tool is useful.
+3. Call the tool when appropriate.
+4. Receive the tool result.
+5. Produce a final response.
+
+The current tool is intentionally simple and local. It is used to validate the tool-calling mechanism before introducing external research tools such as web search.
