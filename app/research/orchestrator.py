@@ -5,6 +5,7 @@ from agents import Runner
 from app.agents.manager import manager_agent
 from app.research.plan import ResearchPlan
 from app.research.state import ResearchState
+from app.research.finding import ResearchFinding
 
 
 def apply_plan(
@@ -29,3 +30,11 @@ async def create_research_state(question: str) -> ResearchState:
     state = ResearchState(question=question)
 
     return apply_plan(state, plan)
+
+
+def add_findings(
+    state: ResearchState,
+    findings: list[ResearchFinding],
+) -> ResearchState:
+    state.findings.extend(findings)
+    return state
