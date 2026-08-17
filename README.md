@@ -33,3 +33,32 @@ The system should eventually be able to:
 ## Status
 
 This repository is under active development.
+
+## Development Setup
+
+The project uses standard Python with a project-local virtual environment.
+
+### Requirements
+
+- Python 3.13
+- Git
+- GitHub
+
+### Windows Setup
+
+Create the virtual environment:
+
+```py -3.13 -m venv .venv```
+
+
+Activate it:
+
+```.venv\Scripts\Activate.ps1```
+
+Verify:
+
+```python --version```
+
+```python -m pip --version```
+
+The virtual environment should be active while developing the project.
