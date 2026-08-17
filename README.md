@@ -33,3 +33,48 @@ The system should eventually be able to:
 ## Status
 
 This repository is under active development.
+
+## Development Setup
+
+The project uses standard Python with a project-local virtual environment.
+
+### Requirements
+
+- Python 3.13
+- Git
+- GitHub
+
+### Windows Setup
+
+Create the virtual environment:
+
+```py -3.13 -m venv .venv```
+
+
+Activate it:
+
+```.venv\Scripts\Activate.ps1```
+
+Verify:
+
+```python --version```
+
+```python -m pip --version```
+
+The virtual environment should be active while developing the project.
+
+## Current Implementation
+
+### V1 — Agent Baseline
+
+The first implementation establishes a minimal AI agent using the OpenAI Agents SDK.
+
+The current application:
+
+- creates an `Agent`
+- defines its instructions
+- executes the agent using `Runner`
+- accepts a fixed test question
+- returns the model's response
+
+The agent does not yet have external tools or autonomous research capabilities. These will be introduced incrementally in subsequent implementation steps.

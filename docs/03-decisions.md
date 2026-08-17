@@ -84,3 +84,37 @@ The objective of the project is to explore autonomous planning, tool usage, dele
 ### Status
 
 Accepted
+
+## Decision 005 — Standard Python Virtual Environment
+
+### Decision
+
+Use standard Python 3.13 with a project-local virtual environment (`.venv`) instead of Conda.
+
+### Reason
+
+The project does not require Conda. A standard Python virtual environment provides isolated dependencies while keeping the development setup simple and close to typical Python development and deployment environments.
+
+### Status
+
+Accepted
+
+---
+
+## Decision 006 — Use the OpenAI Agents SDK
+
+### Decision
+
+Use the OpenAI Agents SDK as the initial framework for implementing the agentic system.
+
+### Reason
+
+The SDK provides core primitives required by the project, including agents, execution through a runner, tool integration, and support for multi-agent orchestration.
+
+Using these primitives allows the project to focus on agentic system design rather than implementing the underlying agent execution loop from scratch.
+
+The SDK will be evaluated continuously as the architecture develops. If it becomes a limitation, the decision can be revisited.
+
+### Status
+
+Accepted
