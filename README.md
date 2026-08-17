@@ -62,3 +62,19 @@ Verify:
 ```python -m pip --version```
 
 The virtual environment should be active while developing the project.
+
+## Current Implementation
+
+### V1 — Agent Baseline
+
+The first implementation establishes a minimal AI agent using the OpenAI Agents SDK.
+
+The current application:
+
+- creates an `Agent`
+- defines its instructions
+- executes the agent using `Runner`
+- accepts a fixed test question
+- returns the model's response
+
+The agent does not yet have external tools or autonomous research capabilities. These will be introduced incrementally in subsequent implementation steps.
