@@ -94,3 +94,19 @@ The current implementation demonstrates the basic agentic loop:
 5. Produce a final response.
 
 The current tool is intentionally simple and local. It is used to validate the tool-calling mechanism before introducing external research tools such as web search.
+
+## V1 — Web Research
+
+The agent can now use web search as an external tool.
+
+When a question requires current or external information, the agent can invoke the web search tool, receive search results, and use those results to construct its response.
+
+The current implementation demonstrates:
+
+1. User provides a research question.
+2. Agent determines that external information is required.
+3. Agent invokes web search.
+4. Search results are returned to the agent.
+5. Agent synthesizes the information into a response.
+
+This is the first external tool in the system and establishes the foundation for autonomous research.

@@ -143,3 +143,23 @@ Once this mechanism is verified, external research tools can be introduced with 
 ### Status
 
 Accepted
+
+---
+
+## Decision 008 — Use Hosted Web Search for Initial Research
+
+### Decision
+
+Use the OpenAI Agents SDK's hosted web search capability as the initial external research tool.
+
+### Reason
+
+Web search is the fundamental external capability required by the research agent.
+
+Using the hosted search tool initially allows us to focus on agent behavior, tool selection, and research workflows without simultaneously building and maintaining our own search infrastructure.
+
+A custom search/retrieval layer can be evaluated later if the project requires more control over source selection, retrieval, caching, or cost.
+
+### Status
+
+Accepted

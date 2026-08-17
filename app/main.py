@@ -1,9 +1,7 @@
 import asyncio
 
 import app.config
-from agents import Agent, Runner
-
-from app.tools import get_project_status
+from agents import Agent, Runner, WebSearchTool
 
 
 agent = Agent(
@@ -14,20 +12,23 @@ agent = Agent(
 
     Provide accurate, concise answers.
 
-    You have access to tools that provide information.
-    Use a tool when it is relevant to answering the user's question.
-    Do not invent information that a tool can provide.
+    You have access to web search.
+    Use web search when the question requires current or external information.
 
-    If you are uncertain about something, say so.
+    Prefer reliable and authoritative sources.
+    Do not invent information.
+    If sources disagree or information is uncertain, say so.
     """,
-    tools=[get_project_status],
+    tools=[
+        WebSearchTool(),
+    ],
 )
 
 
 async def main():
     result = await Runner.run(
         agent,
-        "What is the current development status of the Autonomous Research Agent project?"
+        "What are the most important recent developments in AI agents?"
     )
 
     print(result.final_output)
